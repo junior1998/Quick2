@@ -1,0 +1,113 @@
+.activa{
+  color: #f7f7f7!important;
+}
+.principal{
+  width: 100%;
+  height: 70px;
+  // background: pink;
+  background: #24292e;
+
+  // background: linear-gradient( #24292e, #848484);
+  // display: flex;
+  // justify-content: center;
+.navbar{
+  max-width: 1400px;
+  max-height: 100%;
+  // background: #24292e;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  .navbar_interior{
+    width: 80%;
+    height: 100%;
+  .imagen{
+    width: 50%;
+    height: 100%;
+    // background: red;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        padding-top: 10px;
+        padding-left:  15px;
+        width: 160px;
+    }
+  }
+  .lista{
+    width: 50%;
+    height: 100%;
+    // background: pink;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    ul{
+      li{
+        float: left;
+        padding: 12px;
+        list-style: none;
+        // background: yellow;
+        a{
+          text-decoration: none;
+          font-size: 20px;
+          color: #c1c1c1;
+        }
+        a:hover{
+          color: #f7f7f7;
+        }
+      }
+    }
+  }
+  }
+}
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar_interior{
+    width: 100%!important;
+  }
+}
+
+@media only screen and (max-width: 602px) {
+  .navbar{
+    height: 110px!important;
+    .navbar_interior{
+      width: 100%;
+      height: 100%;
+    .imagen{
+      width: 100%!important;
+      height: 50%!important;
+      justify-content: center!important;
+      img{
+          padding-top: 12px!important;
+          padding-left:  0px!important;
+      }
+    }
+    .lista{
+      width: 100%!important;
+      height: 50%!important;
+      justify-content: center!important;
+      ul{
+        li{
+          padding: 9px!important;
+          a{
+            font-size:20px!important;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+@media only screen and (max-width: 274px) {
+  .lista{
+    ul{
+      li{
+        a{
+          font-size:15px!important;
+        }
+      }
+    }
+  }
+}
