@@ -136,11 +136,15 @@
   display: inline;
 }
 
+.aparecer{
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .principal{
     width: 100%;
-    height: calc(100% - 110px);
-    background: white;
+    // height: calc(100% - 110px);
+    // background: white;
   }
   .contenido{
     width: 100%!important;
@@ -163,17 +167,38 @@
     }
     .formulario{
       width: 100%!important;
-      height: 20%!important;
+      height: auto!important;
       // background: white;
       display: flex!important;
       .contenido_formulario{
         width: 90%!important;
-        height: 78px!important;
+        height: auto!important;
+        form{
+          .form-row{
+            .aparecer{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              h2{
+                text-align: center;
+                color: black;
+                font-size: 30px;
+              }
+              img{
+                width: 100px;
+                margin: auto;
+              }
+            }
+          }
+        }
       }
     }
   }
   .desaparecer{
     display: none;
+  }
+  .aparecer{
+    display: inline;
   }
 }
 
@@ -217,3 +242,59 @@
 //     background: white;
 //   }
 // }
+
+@media only screen and (max-width: 341px) {
+  .aparecer{
+    display: none!important;
+  }
+
+  .contenido{
+    width: 100%!important;
+    .texto{
+      width: 100%!important;
+      height: auto!important;
+      display: inline!important;
+      .contenido_texto{
+        width: 100%;
+        height: 100%!important;
+        h2{
+          padding-top: 30px!important;
+          font-size: 45px!important;
+        }
+        p{
+          font-size: 20px!important;
+          padding-bottom: 0px!important;
+        }
+      }
+    }
+    .formulario{
+      width: 100%!important;
+      height: auto!important;
+      // background: white;
+      display: flex!important;
+      .contenido_formulario{
+        width: 90%!important;
+        height: 80px!important;
+        form{
+          .form-row{
+            .aparecer{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              h2{
+                text-align: center;
+                color: black;
+                font-size: 30px;
+              }
+              img{
+                width: 100px;
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
