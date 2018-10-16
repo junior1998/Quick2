@@ -1,12 +1,14 @@
 .principal{
   width: 100%;
   height: calc(100% - 70px);
+  min-height: 625px;
   // background: pink;
   background: linear-gradient( #24292e, #848484);
 
   // background: linear-gradient( #24292e, #848484);
   display: flex;
   justify-content: center;
+  overflow: inherit;
   // align-items: center;
 .general{
   max-width: 1400px;
@@ -143,9 +145,11 @@
 @media only screen and (max-width: 600px) {
   .principal{
     width: 100%;
-    // height: calc(100% - 110px);
+    height: calc(100% - 110px);
+    min-height: 550px!important;
     // background: white;
   }
+
   .contenido{
     width: 100%!important;
     .texto{
