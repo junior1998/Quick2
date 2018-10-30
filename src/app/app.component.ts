@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {UsuariosService} from './servicios/usuarios.service';
+import { UsuariosService } from './servicios/usuarios.service';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,11 @@ import {UsuariosService} from './servicios/usuarios.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
 
-  constructor(public usuarioSer:UsuariosService){}
+
+  constructor(public usuarioSer: UsuariosService, updates: SwUpdate) {
+    updates.available.subscribe(event => {
+      updates.activateUpdate().then(() => document.location.reload());
+    });
+  }
 }
